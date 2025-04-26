@@ -1,0 +1,252 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v22-latin-500.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2');
+}
+
+/*Глобальные стили*/ 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth; /* плавность прокрутки */
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --aqua: #12f7ff;
+    --violet: #1d002c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--violet);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 25px 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--white);
+}
+.header__logo:hover{
+    color: var(--aqua);
+    text-shadow: 0 0 1rem var(--aqua);
+}
+.header__menu {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.header__menu a {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 25px;
+    border: 2px solid var(--aqua);
+    transition: all 0.3s ease;
+}
+
+.header__menu a:hover {
+    color: var(--violet);
+    background: var(--aqua);
+    box-shadow: 0 0 1rem var(--aqua);
+}
+section {
+    min-height: 100vh;
+}
+.home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+}
+.home img{
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+#text{
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 0 10px 4px rgba(0, 0, 0, 0.85);
+    left: 3%;
+    top: 80%;
+}
+#moon, #desert-moon{
+    mix-blend-mode: screen;
+}
+.about{
+    position: relative;
+}
+.info-box{
+    position: absolute;
+    z-index: 1003;
+    top: 0%;
+    left: 10%;
+    width: 50%;
+    background: var(--violet);
+
+}
+.info-box h2{
+    font-size: 2.3rem;
+}
+.info-box p{
+    margin: 0.5rem 0 1.5rem 0;
+}
+.btn{
+    background: var(--aqua);
+    color: var(--violet);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--aqua);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    box-shadow: 0 0 1rem var(--aqua);
+    background: var(--violet);
+    color: var(--white);
+}
+.about img {
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#waterfall {
+    position: absolute;
+    top: -95px;
+}
+
+.products{
+    display: flex;
+    height: 100vh;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products h1{
+    font-size: 2rem;
+    margin-bottom: 5rem;
+}
+
+.products__container{
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.container-products{
+    border: var(--aqua) solid 1px;
+    border-radius: 1em;
+    width: 350px;
+    height: 450px;
+    position: relative;
+    transition: all 0.5s;
+    top: 0;
+}
+
+.container-products img{
+    object-fit: cover;
+    pointer-events: none;
+    height: 125px;
+}
+
+.img-fish{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 5px var(--aqua)); 
+}
+
+.container-products:hover{
+    position: relative;
+    top: -1rem;
+    box-shadow: 0px 0px 8px 5px var(--aqua);
+}
+
+.name-cost{
+    display: flex;
+    margin: 6rem 1.5rem 2rem 1.5rem;
+    justify-content: space-between;
+
+}
+
+.name-cost h2{
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.name-cost div{
+    display: flex;
+    color: var(--aqua);
+    font-size: 1.5rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.name-cost div span{
+    font-size: 1.5rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.fish-more{
+    font-size: 1rem;
+    margin: 0 1.5rem 1.75rem 1.5rem;
+    text-align: center;
+}
+
+.container-products .btn{
+    padding: 0.5rem 3.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
